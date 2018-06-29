@@ -50,5 +50,10 @@
 <!--
     Atributos suportados:
 
+    Todos os que tem getters e setters, assim como getBackgroundColor
+    valores: customColorValue, customIntegerValue, customFloatValue, customStringValue, customDimension, customBoolean
 
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1.0" />
 -->
