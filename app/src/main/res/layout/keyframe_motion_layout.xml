@@ -5,7 +5,7 @@
     android:id="@+id/mainMotion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/scene_05_keyframe"
+    app:layoutDescription="@xml/scene_01_sideswipe"
     app:showPaths="true"
     >
 
