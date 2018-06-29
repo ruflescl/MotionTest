@@ -1,0 +1,73 @@
+MotionLayout é uma nova classe disponibilizada na versão 2.0 do ConstraintLayout que ajuda a gerenciar movimento e animações em apps.
+
+1) O que é e porque utilizar?
+2) Como adicionar no projeto (gradle)
+3) Uso básico do MotionLayout (Reutilizando layouts existentes e Swipe e Click)
+4) Definindo as ConstraintSets nos arquivos de MotionScen
+5) Transição entre atributos customizados
+6) Transição de imagens
+7) Customizando o path de animação com o KeyPositions
+8) Conclusão
+
+1)
+MAGIA NEGRA
+MotionLayout é uma nova classe disponibilizada na versão 2.0 do ConstraintLayout que ajuda a gerenciar movimento e animações em apps.
+Ela foi adicionada na lib do ConstraintLayout 2.0, que ainda está em fase alpha.
+
+O MotionLayout é, como o nome diz, um layout derivado de ConstraintLayout e como um layout ela permite o desenvolvedor posicionar suas views e definir os relacionamentos de suas views e viewgroups filhas.
+
+O que ela pode fazer:
++ Descreve claramente a transição entre dois layouts (Assim como o TransitionManager)
++ Permite animar propriedades de layout
++ Suporta transições parciais, que podem ser levadas por input do usuário (toque)
++ Suporte a KeyFrames, criando altas possibilidades de customização de animações e transições
+
+Nomes e definições:
+MotionLayout - define as views e seus posicionamentos
+MotionScene - agrupa e define as transições e comportamentos das views com os seus filhos <Transition> e <ConstraintSet>, respectivamente
+Transtion - define o handler de comportamento da transição (OnSwipe ou OnClick) e os <KeyFrameSet> para customização do path dessa transição
+KeyFrameSet - agrupa um conjunto de KeyPositions para customização (mais a frente)
+ConstraintSet - agrupa um conjunto de comportamentos de views (<Constraint>) e atributos customizados para a transição (<CustomAttribute>)
+
+Vamos ver o básico de tudo isso ainda hoje!
+
+2) 
+	[Mostrar o app build.gradle]
+
+3) 
+	[Mostrar main_motion_layout]
+	[Trocar de ConstraintLayout para MotionLayout]
+	[Mostrar o CL start e CL end ++ MOSTRAR NA TRANSITION DA SCENE ++ ]
+	[Mostrar scene_01_sideswipe]
+	[Falar do showPaths !! Tirar em versão de prod !!]
+	[Buildar]
+	
+4) 
+	[Mostrar scene_02_multics]
+	[Trocar no main_motion_layout para scene_02_multics]
+	[Brincar com os atributos de ConstraintSet]
+	[Buildar]
+	
+5)
+	[Mostar scene_03_customattr]
+	[Trocar no main_motion_layout para scene_03_customattr]
+	[Brincar com os atributos de CustomAttribute - explorar e talvez trocar a View para TextView usando o attr 'text' e 'customStringValue']
+	[Buildar]
+	
+6)
+	[MAGIA NEGRA]
+	[Mostrar scene_04_imagefilter - !! novo elemento e altSrc !!]
+	[Trocar na activity para image_filter_motion_layout]
+	[Mostrar o crossfade]
+	[Buildar a MAGIA NEGRA]
+	
+7) 
+	[Mostrar keyframe_motion_layout]
+	[Trocar na activity para keyframe_motion_layout]
+	[Buildar e mostrar a colisão]
+	[Mostrar a scene_05_keyframe e explicar os KeyPositions]
+	[Trocar na keyframe_motion_layout para scene_05_keyframe]
+	[Buildar e Dibrar]
+	
+8) Este foi o básico do novo MotionLayout, lembrando que ele está em versão alpha agora na biblioteca do ConstraintLayout 2.0 e aqui estão alguns links úteis.
+	

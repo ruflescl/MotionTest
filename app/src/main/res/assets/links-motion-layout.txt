@@ -1,0 +1,13 @@
+Links!
+
+** Google I/O 2018 - Apresentação sobre o ContraintLayout 2.0 (MotionLayout está a partir do minuto 29)
+https://www.youtube.com/watch?v=ytZteMo4ETk
+
+** Artigo da Medium em 3 partes (adicionado dia 27/06)
+https://medium.com/google-developers/introduction-to-motionlayout-part-i-29208674b10d
+
+** Documentação oficial do alpha de ConstraintLayout 2.0
+https://androidstudio.googleblog.com/2018/06/constraintlayout-200-alpha-1.html
+
+** GitHub com os exemplos oficiais
+https://github.com/googlesamples/android-ConstraintLayoutExamples
