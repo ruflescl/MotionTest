@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imageMotion"
+    app:layoutDescription="@xml/scene_04_imagefilter_cap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:showPaths="true">
+
+    <android.support.constraint.utils.ImageFilterView
+        android:id="@+id/image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/viccal"
+        app:altSrc="@drawable/quemsera"/>
+
+</android.support.constraint.motion.MotionLayout>
