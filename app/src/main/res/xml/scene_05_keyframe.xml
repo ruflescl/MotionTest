@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/end"
-        motion:duration="1000">
+        motion:duration="1000"
+        motion:interpolator="linear">
         <OnSwipe
             motion:touchAnchorId="@+id/square"
             motion:touchAnchorSide="right"
             motion:dragDirection="dragRight" />
 
+        <KeyFrameSet>
+            <KeyPosition
+                motion:type="pathRelative"
+                motion:percentY="-0.25"
+                motion:framePosition="25"
+                motion:target="@id/square"/>
+            <KeyPosition
+                motion:type="pathRelative"
+                motion:percentY="0.25"
+                motion:framePosition="75"
+                motion:target="@id/square"/>
+        </KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/square"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:id="@id/square"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -31,9 +45,9 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/square"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:id="@id/square"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -44,11 +58,4 @@
                 motion:customColorValue="@color/colorPrimary" />
         </Constraint>
     </ConstraintSet>
-
 </MotionScene>
-
-<!--
-    Atributos suportados:
-
-
--->

@@ -5,10 +5,30 @@
         motion:constraintSetStart="@layout/motion_01_cl_start"
         motion:constraintSetEnd="@layout/motion_01_cl_end"
         motion:duration="1000">
+
         <OnSwipe
             motion:touchAnchorId="@+id/square"
             motion:touchAnchorSide="right"
-            motion:dragDirection="dragRight" />
-    </Transition>
+            motion:dragDirection="dragRight"
+            />
 
+        <!--
+        Outros params do OnSwipe (opcionais):
+        touchAnchorSide - top, bottom, left
+        dragDirection - dragUp, dragDown, dragLeft
+        maxVelocity - limitar a velocidade maxima da animacao
+        maxAcceleration - limitar a aceleracao maxima da animacao
+        moveWhenScrollAtTop "If the swipe is scrolling and View (such as RecyclerView or NestedScrollView) do scroll and transition happen at the same time"
+        -->
+
+        <OnClick
+            motion:target="@+id/square"
+            motion:mode="transitionToEnd"
+            />
+
+        <!-- Outros params do OnClick
+        mode: transitionToEnd, toggle, transitionToStart, jumpToEnd, jumpToStart
+        -->
+
+    </Transition>
 </MotionScene>
